@@ -43,3 +43,11 @@ if ingredients_list:
         session.sql(my_insert_stmt).collect()
 
         st.success('Your Smoothie is ordered, ' + name_on_order + '!', icon="✅")
+
+# New section to display nutrition information.
+# smoothiefruit site not working for me. Revert to fruityvice.
+import requests
+# smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+# st.text(smoothiefroot_response)
+fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
