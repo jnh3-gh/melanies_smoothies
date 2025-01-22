@@ -50,4 +50,5 @@ import requests
 # smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 # st.text(smoothiefroot_response)
 fruityvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+# st.text(fruityvice_response.json())
+fv_df = st.dataframe(data = fruityvice_response.json(), use_container_width = True)
